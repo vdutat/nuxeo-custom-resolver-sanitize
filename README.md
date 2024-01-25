@@ -13,7 +13,7 @@ Building requires the following software:
 
 ```
 git clone ...
-cd nuxeo-active-user-login-module
+cd nuxeo-custom-resolver-sanitize
 
 mvn clean install
 ```
