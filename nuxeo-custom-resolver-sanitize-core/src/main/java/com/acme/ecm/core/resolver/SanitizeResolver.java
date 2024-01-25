@@ -38,16 +38,16 @@ public class SanitizeResolver extends AbstractObjectResolver implements ObjectRe
     }
 
     @Override
-    public <T> T fetch(Class<T> value, Object context) {
-        log.warn("<fetch> " + value + ", " + context);
-        throw new UnsupportedOperationException();
-    }
-
-    @Override
     public String getConstraintErrorMessage(Object invalidValue, Locale locale) {
         //Add to 'messages.json' in Studio Designer:
         //"label.schema.constraint.violation.resolver.sanitizeResolver":"'{0}' contains illegal characters."
         return ObjectResolver.Helper.getConstraintErrorMessage(this, invalidValue, locale);
+    }
+
+    @Override
+    public <T> T fetch(Class<T> value, Object context) {
+        log.warn("<fetch> " + value + ", " + context);
+        throw new UnsupportedOperationException();
     }
 
     @Override
