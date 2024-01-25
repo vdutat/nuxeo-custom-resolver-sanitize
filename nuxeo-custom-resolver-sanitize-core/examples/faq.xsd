@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+ xmlns:nxsv="http://www.nuxeo.org/ecm/schemas/core/validation/"
+ xmlns:ref="http://www.nuxeo.org/ecm/schemas/core/external-references/"
+ targetNamespace="http://www.nuxeo.org/ecm/project/schemas/vdutat-sandbox-11x-nuxeo/faq">  
+  <xs:element name="answer" nillable="false" nxsv:nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string" ref:resolver="sanitizeResolver">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="4000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+  <xs:element name="question" nillable="false" nxsv:nillable="false">
+    <xs:simpleType>
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="1000"/>
+      </xs:restriction>
+    </xs:simpleType>
+  </xs:element>
+</xs:schema>

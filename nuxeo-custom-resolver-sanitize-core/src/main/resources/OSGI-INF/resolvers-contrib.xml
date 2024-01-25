@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<component name="com.acme.ecm.core.resolver.sanitize">
+
+  <extension target="org.nuxeo.ecm.core.schema.ObjectResolverService" point="resolvers">
+    <resolver type="sanitizeResolver" class="com.acme.ecm.core.resolver.SanitizeResolver"/>
+  </extension>
+
+</component>
