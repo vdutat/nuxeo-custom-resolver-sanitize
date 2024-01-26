@@ -39,3 +39,10 @@ jobs:
         restore-keys: ${{ runner.os }}-m2
     - name: Build with Maven
       run: mvn -B package --file pom.xml
+    - name: Save artifact
+      run: mkdir staging && cp nuxeo-custom-resolver-sanitize-package/target/nuxeo-custom-resolver-sanitize-package*.zip staging
+    - name: Persist artifact  
+      uses: actions/upload-artifact@v1
+      with:
+        name: nuxeo-custom-resolver-sanitize-package
+        path: staging
