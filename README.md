@@ -18,6 +18,10 @@ cd nuxeo-custom-resolver-sanitize
 mvn clean install
 ```
 
+# CI
+
+[![Java CI with Maven](https://github.com/vdutat/nuxeo-custom-resolver-sanitize/actions/workflows/maven.yml/badge.svg)](https://github.com/vdutat/nuxeo-custom-resolver-sanitize/actions/workflows/maven.yml)
+
 # Installation
 
 ```
